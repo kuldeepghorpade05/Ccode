@@ -14,7 +14,12 @@ int fib(int n);
 int sum2(int n);
 
 //Fibonacci using Recursion
-int Fibonacci(int i);
+long int Fibonacci(int i);
+
+//storing 2 and 3 table using 2D array
+void storetable(int arr[][10], int n, int m, int number);
+
+void showstring(char arr[]);
 
 //---------------------------------------------------------------
 	
@@ -211,14 +216,59 @@ printf("%d",_age );*/
 
 
 //Fibonacci using Recursion
-int num;
+/*int num;
 printf("enter the number : ");
 scanf("%d",&num);
 
-for(int i=0; i<num; i++){
+for(long int i=0; i<num; i++){
 	printf("%d\n",Fibonacci(i));
-}
-	
+}*/
+
+//fibonacci using ARRAY and ITERATION
+
+/*int n;
+printf("Enter n : ");
+scanf("%d",&n);
+
+int fib[n];
+fib[0]=0;
+fib[1]=1;
+
+printf("0 \t 1 \t");
+for(int i=2; i<n; i++){
+	fib[i]=fib[i-1]+fib[i-2];
+	printf("%d\t",fib[i]);
+}*/
+
+
+//Q46 create a 2D array, storing the tables of 2 and 3 
+
+/*int tables[2][10];
+storetable(tables,0, 10, 2);
+storetable(tables,1, 10, 3);
+
+	for(int i=0; i<10; i++ ){
+		printf("%d\t",tables[0][i]);
+	}
+	printf("\n");
+	for(int i=0; i<10; i++ ){
+		printf("%d\t",tables[1][i]);
+	}*/
+
+
+char firstline[]="this is first line";
+char secondline[]="this is second line";
+
+showstring(firstline);
+showstring(secondline);
+
+
+ 
+
+
+
+
+
 
 
 
@@ -292,7 +342,7 @@ int sum = 0;
 
 
 //Fibonacci using Recursion
-int Fibonacci(int i){
+long int Fibonacci( int i){
 	if(i==0){
 		return 0;
 	}else if(i==1){
@@ -301,4 +351,27 @@ int Fibonacci(int i){
 	    return Fibonacci(i-1)+Fibonacci(i-2);
 	}
 }
+
+void storetable(int arr[][10], int n, int m, int number){
+	for(int i=0; i<m; i++ ){
+		arr[n][i] = number * (i+1);
+	}
+}
+
+void showstring(char arr[]){
+	for(int i=0; arr[i]!='\0'; i++){
+		printf("%c",arr[i]);
+	}
+	printf("\");
+}
+
+
+
+
+
+
+
+
+
+
 

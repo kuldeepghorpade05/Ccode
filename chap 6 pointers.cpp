@@ -112,7 +112,7 @@ printf("%d,%d,%d",sum,prod,avg);*/
 //write a program in c to find the maximum number between two numbers using a pointer
 	
 int fno=23;
-int sno=45;
+int sno=45;  
 int *ptr1=&fno;
 int *ptr2=&sno;
 
@@ -124,9 +124,7 @@ if(*ptr1>*ptr2){
 	
 	
 	
-	
-	
-	
+
 	
 	
 	
@@ -179,7 +177,6 @@ void dowork(int a, int b, int *sum, int *prod, int *avg){
 	 *prod=a*b;
 	 *avg =(a+b)/2;
 }
-
 
 
 

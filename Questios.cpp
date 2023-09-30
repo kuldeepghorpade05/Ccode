@@ -74,8 +74,11 @@ float gst(float value);
 //converts celsius to fareniet
 float convertTemp(float celsius);
 //Fibonacci using Recursion
-int Fibonacci(int i);
+long int Fibonacci(int i);
 
+
+
+//------------------------------------------------------------------
 int main(){
 	
 //int a = 5;                         // addition
@@ -173,16 +176,41 @@ printf("%ld",power);*/
 
 
 //Fibonacci using Recursion
-int num;
+/*int num;
 printf("enter the number : ");
 scanf("%d",&num);
 
-for(int i=0; i<num; i++){
+for(long int i=0; i<num; i++){
 	printf("%d\n",Fibonacci(i));
-}
+}*/
 	
+//Q write a program to enter price of 3 items and print their final cost with gst
+	
+/*float price[3];
+printf("enter 3 prices : ");
+scanf("%f",&price[0]);
+scanf("%f",&price[1]);
+scanf("%f",&price[2]);
+
+printf("price 1 : %f\n",price[0]+(0.18*price[0]));
+printf("price 2 : %f\n",price[1]+(0.18*price[1]));
+printf("price 3 : %f\n",price[2]+(0.18*price[2]));*/ 
 
 
+//fibonacci using ARRAY and ITERATION
+int n;
+printf("Enter n : ");
+scanf("%d",&n);
+
+int fib[n];
+fib[0]=0;
+fib[1]=1;
+
+printf("0 \t 1 \t");
+for(int i=2; i<n; i++){
+	fib[i]=fib[i-1]+fib[i-2];
+	printf("%d\t",fib[i]);
+}
 
 
 
@@ -192,6 +220,7 @@ for(int i=0; i<num; i++){
 return 0;	
 }
 
+//----------------------------------------------------------------
 int addn(int a, int b){
 	return a + b;
 }
@@ -568,7 +597,7 @@ float convertTemp(float celsius){
 
 
 //Fibonacci using Recursion
-int Fibonacci(int i){
+long int Fibonacci(int i){
 	if(i==0){
 		return 0;
 	}else if(i==1){
